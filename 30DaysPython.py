@@ -14,6 +14,7 @@ print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 
 # OPERATORS
+
 """
 # we can use 3 nail to the area we don't want it to detect
 addition(+)
@@ -24,6 +25,7 @@ exponential(**)
 modulus(%)
 Floor division operator(//)
 """
+
 # End of the Day 1
 
 # --------------------
@@ -133,5 +135,5 @@ print("Your montly earned money is: ", daily_earn * 30, " USD$")
 
 # -----------------
 
-# End of the Day 4
+# Start of the Day 4
 
