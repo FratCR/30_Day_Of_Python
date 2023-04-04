@@ -381,3 +381,64 @@ print(challenge.startswith('thirty')) # False
 
 # Start of the Day 5
 
+# LISTS
+
+# 2 Type of Create a Lists
+
+""""
+empty_list1 = list()
+empty_list2 = []
+
+print(len(empty_list1)) # 0 because empty
+print(len(empty_list2)) # 0 because empty too
+
+# lists can contain anything of both desired and desired type
+
+list_numbers = [1,2,3,4,5,6,7,8,9]
+list_variable = [1,2,"Hi", False, 3.14, 5.16, "Guys"]
+
+print(list_numbers, list_variable)
+
+# you can take anything in the list with index numbers or you can asign these
+#  you can take or go with the negative index numbers, they are going reverse in the list
+"""
+
+"""
+fruits = ['banana', 'orange', 'mango', 'lemon']
+all_fruits = fruits[0:4] # it returns all the fruits
+# this will also give the same result as the one above
+all_fruits = fruits[0:] # if we don't set where to stop it takes all the rest
+orange_and_mango = fruits[1:3] # it does not include the first index
+orange_mango_lemon = fruits[1:]
+orange_and_lemon = fruits[::2] # here we used a 3rd argument, step. It will take every 2cnd item - ['banana', 'mango']
+"""
+
+# you can apply, change or delete anything inside of lists
+
+# LIST METHODS
+
+list_vehicles = ["Ford","Toyota","Mercedes","Wolkswagen","Hyundai","Tesla","BMW"]
+list_vehicles[1] = "Ferrari"
+list_vehicles.append("Renault") 
+list_vehicles.insert(3, "Porsche") # you can use insert method to index adding
+list_vehicles.remove("BMW")
+list_vehicles.pop(2) # you can also delete with index number with pop method
+del list_vehicles[3] # also you can delete everyone of your list with this method, just don't use index and delete
+# also if you do use list_vehicle.clear method, your list is cleaned and empty now
+
+print(list_vehicles.sort()) # you can sort with this method to ascending
+print(list_vehicles)
+print(list_vehicles.count("Hyundai")) # It's showing us to this value count in list
+print(list_vehicles.index("Ford")) # you can learn your searched value index with this method
+
+does_exist_vehicle = "Ford" in list_vehicles # if "Ford" or other vehicles doesn't exist, output will be False
+print(does_exist_vehicle)
+
+# End of the Day 5
+
+#------------------
+
+# Start of the Day 6
+
+# TUPLES
+
