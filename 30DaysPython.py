@@ -442,3 +442,34 @@ print(does_exist_vehicle)
 
 # TUPLES
 
+# 2 type of the create tuple
+
+tuple1 = ()
+tuple2 = tuple()
+
+tuple_examp = ("Electro Guitar", "Bass Guitar", "Vocal", "Keyboard", "Drum")
+tuple_persons = ("Lemmy", "Peter", "Tony", "Ronnie", "James")
+
+print(len(tuple_examp))
+print("I'm using "+ tuple_examp[0] +" to my main entrument") # we can call with index number
+print(tuple_examp[-1]) # we can call negative index number, same the lists
+print(tuple_examp[0:6]) # we can call values with strings to indexs
+
+tuple_examp = list(tuple_examp)
+tuple_examp = tuple(tuple_examp) # we can convert list to tuple or tuple to string
+
+print("Electro Guitar" in tuple_examp) # we can check any item with in method
+
+# tuple_examp[0] = 'apple' # TypeError: 'tuple' object does not support item assignment
+
+united_tuple = tuple_examp + tuple_persons # we can create joined tuples
+print(united_tuple)
+
+del united_tuple
+del tuple_persons # we can delete with this command becasue methods are not used much in tuples
+
+# End of the Day 6
+
+#-----------------
+
+# Start of the Day 7
