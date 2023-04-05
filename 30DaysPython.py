@@ -473,3 +473,76 @@ del tuple_persons # we can delete with this command becasue methods are not used
 #-----------------
 
 # Start of the Day 7
+
+# SETS
+
+# 2 type of create set
+
+"""
+set1 = {}
+set2 = set()
+
+set_examp = {"Motörhead", "Type O Negative","Black Sabbath", "Dio", "Metallica"}
+set_exl = {"Iron Maiden", "Judas Priest", "Megadeth, Black Sabbath", "Motörhead"}
+
+print(set_examp)
+print(len(set_examp))
+
+print("Does set set_examp contain Dio ? ", "Dio" in set_examp)
+
+set_examp.add("Led Zeppelin") # we can add with this method
+# set_examp.update("Iron Maiden") # Each letter or digit of the value added with the update method is used one by one, without repeating the same
+set_examp.remove("Metallica") # we can remove anything inside of this set with this method
+set_examp.pop() # we can remove 1 value to random with this method
+# set_examp.clear() # we can clear this set with method
+# del set_examp # we can delete this set to del method
+print(set_exl.intersection(set_examp)) # we can use intersection method to show both
+print(set_examp.difference(set_exl)) # we can use difference method to find different values both
+"""
+
+"""
+set_united = set_examp.union(set_exl)
+print(set_united)
+"""
+
+"""
+set01 = {"Light", "Heavy", "Mid-Weight"}
+set01 = list(set01)
+print(type(set01))
+set01 = set(set01)
+print(type(set01))
+"""
+
+# Checking Subset and Super Set
+
+st1 = {'item1', 'item2', 'item3', 'item4'}
+st2 = {'item2', 'item3'}
+st2.issubset(st1) # True
+st1.issuperset(st2) # True
+
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+even_numbers = {0, 2, 4, 6, 8, 10}
+whole_numbers.issubset(even_numbers) # False, because it is a super set
+whole_numbers.issuperset(even_numbers) # True
+
+python = {'p', 'y', 't', 'h', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python.issubset(dragon)     # False
+
+# Finding Symmetric Difference Between Two Sets
+
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+some_numbers = {1, 2, 3, 4, 5}
+whole_numbers.symmetric_difference(some_numbers) # {0, 6, 7, 8, 9, 10}
+
+python = {'p', 'y', 't', 'h', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python.symmetric_difference(dragon)  # {'r', 't', 'p', 'y', 'g', 'a', 'd', 'h'}
+
+# End of the Day 7
+
+#------------------
+
+# Start of the Day 8
+
+# DICTIONARIES
