@@ -546,3 +546,147 @@ python.symmetric_difference(dragon)  # {'r', 't', 'p', 'y', 'g', 'a', 'd', 'h'}
 # Start of the Day 8
 
 # DICTIONARIES
+
+# 2 type of create dictionary
+
+"""
+dict1 = {}
+dict2 = dict()
+
+# dictionary struct
+
+person = {
+    "name" : "Fırat",
+    # Key --- Value
+    "surname" : "Çakır",
+    "age" : 18,
+    "country" : ["Turkey"]
+}
+
+print(person['name']) # this is callin a name key to print value (Fırat)
+print(len(person)) # this is just showing all key-value couple length
+
+# item adding to dictionaries
+
+person["height"] = 183
+person["country"] += ["Albania"]
+
+person["age"] = 19 # we can change any value so easily
+
+# METHODS
+
+print(person)
+print("name" in person) # just keys is showing with this method, not for value
+
+person.pop("age") # we can delete with this method to dict items with key names, and deleting with value
+person.popitem() # this method is deleting last keys and value
+print(person)
+del person["country"] # aaand we can any keys and item too
+person.clear() # we can clear our dictionary with this method
+del person # and yes, we can delete with delete method this dictionary, classicly
+"""
+
+"""
+band1 = {
+    "lead vocal" : "Mustaine",
+    "rythm guitar" : "Mustaine",
+    "lead guitar" : "Loureiro",
+    "bass guitar" : "LoMenzo",
+    "drum" : "Verbeuren",
+    "back vocal" : ["Loureiro", "LoMenzo"]
+}
+
+band1_copy = {
+    "any" : "whatever"
+}
+
+band1_copy = band1.copy() # we can copy this method, deleting inside of everything in copied place
+print(band1_copy.keys()) # we can call every key in inside of dictionary
+print(band1_copy.values()) # we can call every value in inside of dictionary
+"""
+
+# End of the Day 8
+
+#-------------------
+
+# Start of the Day 9
+
+# IF ELIF ELSE
+
+# if
+
+inputed_number = int(input("Enter a Number: ")) # you can want user input with this input method and input is basicly coming to string, you can change that
+
+"""
+if inputed_number > 15: # if you want any output with condition, you can use if, if elif,if else, if elif else methods, just 3 unit
+    print("Your number is bigger than 15")
+"""
+
+# if else
+
+"""
+if inputed_number > 15:
+    print("Your number is bigger than 15")
+else:
+    print("Your number is smaller then 16") # if first is method don't useful, we can use else for anything. Don't need condition
+"""
+
+# if elif else
+
+"""
+if inputed_number > 15:
+    print("Your number is bigger than 15")
+elif inputed_number == 0:
+    print("Your number is 15") # we can use endless elif and if method but we can use else method just one time
+else:
+    print("Your number is smaller than 15") # if first is method don't useful, we can use else for anything. Don't need condition
+"""
+
+"""
+print("Number is bigger than 15") if inputed_number > 15 else inputed_number == 0: print("Number isn't 15") # we can use 1-line if else but it isn't recommend
+"""
+
+# nested conditions
+
+"""
+if inputed_number < 16:
+    if inputed_number == 15:
+        print("Your number is 15")
+    else:
+        print("Your number smaller than 15")
+else:
+    print("Your number bigger than 15")
+"""
+
+# logical operators
+"""
+a = 0
+if a > 0 and a % 2 == 0:
+        print('A is an even and positive integer')
+elif a > 0 and a % 2 !=  0:
+     print('A is a positive integer')
+elif a == 0:
+    print('A is zero')
+else:
+    print('A is negative')
+"""
+
+"""
+user = 'James'
+access_level = 3
+if user == 'admin' or access_level >= 4:
+        print('Access granted!')
+else:
+    print('Access denied!')
+"""
+
+# End of the Day 9
+
+#-------------------
+
+# Start of the Day 10
+
+# LOOPS
+
+# while
+
