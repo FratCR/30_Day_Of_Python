@@ -690,3 +690,88 @@ else:
 
 # while
 
+"""
+number = 1
+while number < 5:
+    print(number)
+    number += 1
+else:
+    print(f"Biggest number is {number-1}")
+"""
+
+"""
+number = 0
+while number <= 100:
+    print(number)
+    number += 1
+    if number == 99:
+        break # we can use continue like this
+"""
+
+# for
+
+"""
+numbers = [1,2,3,4,5,6,7,8,9]
+for number in numbers:
+    print(number) # basically work method for to "for"
+"""
+
+"""
+language = 'Python'
+for letter in language:
+    print(letter)
+"""
+
+"""
+for i in range(len(language)):
+    print(language[i])
+"""
+
+"""
+numbers = (0,1,2,3,4,5)
+for number in numbers:
+    print(number)
+    if number == 3:
+        break
+"""
+
+"""
+lst = list(range(11)) 
+print(lst) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+st = set(range(1, 11))    # 2 arguments indicate start and end of the sequence, step set to default 1
+print(st) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+lst = list(range(0,11,2))
+print(lst) # [0, 2, 4, 6, 8, 10]
+st = set(range(0,11,2))
+print(st) #  {0, 2, 4, 6, 8, 10}
+"""
+
+"""
+dict = {
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+    }
+
+for key in dict:
+    if key == 'skills':
+        for skill in dict['skills']:
+            print(skill) # JavaScript, React, Node, MongoDB, Python
+"""
+
+"""for number in range(11):
+    print(number)   # prints 0 to 10, not including 11
+else:
+    print('The loop stops at', number)
+"""
+
+"""
+for number in range(6):
+    pass
+"""
+
+# End of the Day 10
+
+#-------------------
+
+# Start of the Day 11
+
