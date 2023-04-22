@@ -775,3 +775,526 @@ for number in range(6):
 
 # Start of the Day 11
 
+# Functions
+
+# define a function
+
+"""
+def func_square(a): # we use just "def" command to define a function
+    a = a**2
+    print(a)
+    
+func_square(3) # function already have a print func so we don't need use again
+# we can assign parameters same "func_square(a=3, b=5)"
+"""
+
+"""
+def inputed_func():
+    number_one = int(input("Enter number one : "))
+    number_two = int(input("Enter number two: "))
+    total = number_one + number_two
+    return total
+
+print(inputed_func()) #sum with function
+    """
+
+"""
+def area_of_circle (r):
+    PI = 3.14
+    area = PI * r ** 2
+    return area
+"""
+
+"""
+def sum_all_nums(*nums):
+    total = 0
+    for num in nums:
+        total += num     # same as total = total + num 
+    return total
+print(sum_all_nums(2, 3, 5)) # 10
+"""
+
+"""
+# Default and Arbitrary Number of Parameters in Functions
+def generate_groups (team,*args):
+    print(team)
+    for i in args:
+        print(i)
+print(generate_groups('Team-1','Asabeneh','Brook','David','Eyob'))
+
+# Function as a Parameter of Another Function
+#You can pass functions around as parameters
+def square_number (n):
+    return n * n
+def do_something(f, x):
+    return f(x)
+print(do_something(square_number, 3)) # 27
+"""
+
+# End of the Day 11
+
+#--------------------
+
+# Start of the Day 12
+
+# MODULES
+
+#Importing a Module
+
+"""
+import examplemodule
+print(examplemodule.generate_full_name('Firat', 'Cakir')) # Firat Cakir
+
+# Also we can import functions from other imported modules
+"""
+
+"""
+from examplemodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g #we can rename modules and functions like this
+print(fullname('Firat','Cakir'))
+print(total(1, 9))
+mass = 100
+weight = mass * g(9.81)
+print(weight)
+print(p)
+"""
+
+"""
+# OS Module
+# Using python os module it is possible to automatically perform many operating system tasks. 
+# The OS module in Python provides functions for creating, changing current working directory, and removing a directory (folder), fetching its contents, changing and identifying the current directory.
+# import the module
+import os
+# Creating a directory
+os.mkdir("directory1")
+# Changing the current directory
+os.chdir("path")
+# Getting current working directory
+os.getcwd()
+# Removing directory
+os.rmdir()
+"""
+
+"""
+# Sys Module
+# The sys module provides functions and variables used to manipulate different parts of the Python runtime environment. Function sys.argv returns a list of command line arguments passed to a Python script. 
+# The item at index 0 in this list is always the name of the script, at index 1 is the argument passed from the command line.
+
+import sys
+#print(sys.argv[0], argv[1],sys.argv[2])  # this line would print out: filename argument1 argument2
+print('Welcome {}. Enjoy  {} challenge!'.format(sys.argv[1], sys.argv[2]))
+
+#Some useful sys commands
+
+# to exit sys
+sys.exit()
+# To know the largest integer variable it takes
+sys.maxsize
+# To know environment path
+sys.path
+# To know the version of python you are using
+sys.version
+
+# Statistics Module
+# The statistics module provides functions for mathematical statistics of numeric data. The popular statistical functions which are defined in this module: mean, median, mode, stdev etc.
+
+from statistics import * # importing all the statistics modules
+ages = [20, 20, 4, 24, 25, 22, 26, 20, 23, 22, 26]
+print(mean(ages))       # ~22.9
+print(median(ages))     # 23
+print(mode(ages))       # 20
+print(stdev(ages))      # ~2.3
+
+# Math Module
+# Module containing many mathematical operations and constants.
+
+import math
+print(math.pi)           # 3.141592653589793, pi constant
+print(math.sqrt(2))      # 1.4142135623730951, square root
+print(math.pow(2, 3))    # 8.0, exponential function
+print(math.floor(9.81))  # 9, rounding to the lowest
+print(math.ceil(9.81))   # 10, rounding to the highest
+print(math.log10(100))   # 2, logarithm with 10 as base
+
+from math import pi
+print(pi)
+
+# It is also possible to import multiple functions at once
+
+from math import pi, sqrt, pow, floor, ceil, log10
+print(pi)                 # 3.141592653589793
+print(sqrt(2))            # 1.4142135623730951
+print(pow(2, 3))          # 8.0
+print(floor(9.81))        # 9
+print(ceil(9.81))         # 10
+print(math.log10(100))    # 2
+
+# But if we want to import all the function in math module we can use * .
+
+from math import *
+print(pi)                  # 3.141592653589793, pi constant
+print(sqrt(2))             # 1.4142135623730951, square root
+print(pow(2, 3))           # 8.0, exponential
+print(floor(9.81))         # 9, rounding to the lowest
+print(ceil(9.81))          # 10, rounding to the highest
+print(math.log10(100))     # 2
+
+# When we import we can also rename the name of the function.
+
+from math import pi as  PI
+print(PI) # 3.141592653589793
+
+# String Module
+
+# A string module is a useful module for many purposes. The example below shows some use of the string module.
+
+import string
+print(string.ascii_letters) # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+print(string.digits)        # 0123456789
+print(string.punctuation)   # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+# Random Module
+
+from random import random, randint
+print(random())   # it doesn't take any arguments; it returns a value between 0 and 0.9999
+print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive
+"""
+
+# End of the Day 12
+
+#---------------------
+
+# Start of the Day 13
+
+# LIST COMPREHENSION - LAMBDA 
+
+"""
+# One way
+language = 'Python'
+lst = list(language) # changing the string to list
+print(type(lst))     # list
+print(lst)           # ['P', 'y', 't', 'h', 'o', 'n']
+
+# Second way: list comprehension
+lst = [i for i in language]
+print(type(lst)) # list
+print(lst)       # ['P', 'y', 't', 'h', 'o', 'n']
+
+# Generating numbers
+numbers = [i for i in range(11)]  # to generate numbers from 0 to 10
+print(numbers)                    # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# It is possible to do mathematical operations during iteration
+squares = [i * i for i in range(11)]
+print(squares)                    # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# It is also possible to make a list of tuples
+numbers = [(i, i * i) for i in range(11)]
+print(numbers)                             # [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
+
+# Generating even numbers
+even_numbers = [i for i in range(21) if i % 2 == 0]  # to generate even numbers list in range 0 to 21
+print(even_numbers)                    # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# Generating odd numbers
+odd_numbers = [i for i in range(21) if i % 2 != 0]  # to generate odd numbers in range 0 to 21
+print(odd_numbers)          # [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+# Filter numbers: let's filter out positive even numbers from the list below
+positive_even_numbers = [i for i in range(21) if i % 2 == 0 and i > 0]
+print(positive_even_numbers)                    # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# Flattening a three dimensional array
+list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened_list = [ number for row in list_of_lists for number in row]
+print(flattened_list)    # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Named function
+def add_two_nums(a, b):
+    return a + b
+
+print(add_two_nums(2, 3))     # 5
+# Lets change the above function to a lambda function
+add_two_nums = lambda a, b: a + b
+print(add_two_nums(2,3))    # 5
+
+# Self invoking lambda function
+(lambda a, b: a + b)(2,3) # 5 - need to encapsulate it in print() to see the result in the console
+
+square = lambda x : x ** 2
+print(square(3))    # 9
+cube = lambda x : x ** 3
+print(cube(3))    # 27
+
+# Multiple variables
+multiple_variable = lambda a, b, c: a ** 2 - 3 * b + 4 * c
+print(multiple_variable(5, 5, 3)) # 22
+
+def power(x):
+    return lambda n : x ** n
+
+cube = power(2)(3)   # function power now need 2 arguments to run, in separate rounded brackets
+print(cube)          # 8
+two_power_of_five = power(2)(5) 
+print(two_power_of_five)  # 32
+"""
+
+# End of the Day 13
+
+#-------------------
+
+# Start of the Day 14
+
+# HIGHER ORDER FUNCTIONS
+
+"""
+def sum_numbers(nums):  # normal function
+    return sum(nums)    # a sad function abusing the built-in sum function :<
+# (I don't understand how to sum)
+def higher_order_function(f,lst): # function as a parameter
+    summation = f(lst)
+    return summation
+result = higher_order_function(sum_numbers, [1,2,3,4,5])
+print(result) # 15
+"""
+
+# like use multi func to one process (for higher order func.)
+"""
+def square(x):          # a square function
+    return x ** 2
+
+def cube(x):            # a cube function
+    return x ** 3
+
+def absolute(x):        # an absolute value function
+    if x >= 0:
+        return x
+    else:
+        return -(x)
+
+def higher_order_function(type): # a higher order function returning a function
+    if type == 'square':
+        return square
+    elif type == 'cube':
+        return cube
+    elif type == 'absolute':
+        return absolute
+    else:
+        print("Please use 'square','cube' or 'absolute' commands")
+
+result = higher_order_function('square')
+print(result(3))       # 9
+result = higher_order_function('cube')
+print(result(3))       # 27
+result = higher_order_function('absolute')
+print(result(-3))      # 3
+"""
+
+"""
+def add_ten():
+    ten = 10
+    def add(num):
+        return num + ten
+    return add
+
+closure_result = add_ten()
+print(closure_result(5))  # 15
+print(closure_result(10))  # 20
+"""
+
+"""
+# Normal function
+def greeting():
+    return 'Welcome to Python'
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+g = uppercase_decorator(greeting)
+print(g())          # WELCOME TO PYTHON
+
+# Let us implement the example above with a decorator
+# I think we don't need these functions for upper method, nevermind 
+
+'''This decorator function is a higher order function
+that takes a function as a parameter'''
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+@uppercase_decorator
+def greeting():
+    return 'Welcome to Python'
+print(greeting())   # WELCOME TO PYTHON
+
+'''These decorator functions are higher order functions
+that take functions as parameters'''
+
+# First Decorator
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+
+# Second decorator
+def split_string_decorator(function):
+    def wrapper():
+        func = function()
+        splitted_string = func.split()
+        return splitted_string
+
+    return wrapper
+
+@split_string_decorator
+@uppercase_decorator     # order with decorators is important in this case - .upper() function does not work with lists
+def greeting():
+    return 'Welcome to Python'
+print(greeting())   # WELCOME TO PYTHON
+"""
+"""
+def decorator_with_parameters(function):
+    def wrapper_accepting_parameters(para1, para2, para3):
+        function(para1, para2, para3)
+        print("I live in {}".format(para3))
+    return wrapper_accepting_parameters
+
+@decorator_with_parameters
+def print_full_name(first_name, last_name, country):
+    print("I am {} {}. I love to teach.".format(
+        first_name, last_name, country))
+
+print_full_name("Firat", "Cakir",'Turkey')
+"""
+
+# Map Functions
+
+"""
+numbers = [1, 2, 3, 4, 5] # iterable
+def square(x):
+    return x ** 2
+numbers_squared = map(square, numbers)
+print(list(numbers_squared))    # [1, 4, 9, 16, 25]
+# Lets apply it with a lambda function
+numbers_squared = map(lambda x : x ** 2, numbers)
+print(list(numbers_squared))    # [1, 4, 9, 16, 25] # we can use lambda for write less code
+"""
+
+"""
+cities = ["istanbul", "ankara", "izmir", "adana", "bursa"]
+def bigger(city):
+    return city.capitalize()
+
+cities_bigger = map(bigger, cities)
+print(list(cities_bigger))
+
+# also we can use both of these methods
+
+cities_bigger1 = map(lambda city: city.capitalize(), cities)
+print(list(cities_bigger1))
+"""
+
+# Filter Functions
+
+"""
+# Lets filter only even nubers
+numbers = [1, 2, 3, 4, 5]  # iterable
+
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    return False
+
+even_numbers = filter(is_even, numbers)
+print(list(even_numbers))       # [2, 4]
+
+#------------------------------------------
+
+numbers = [1, 2, 3, 4, 5]  # iterable
+
+def is_odd(num):
+    if num % 2 != 0:
+        return True
+    return False
+
+odd_numbers = filter(is_odd, numbers)
+print(list(odd_numbers))       # [1, 3, 5]
+"""
+"""
+names = ["Firat", "Kadir", "Furkan", "Rana", "Merve", "Aktila", "Cemal"]
+def name_filter(name):
+    if len(name) > 5:
+        return True
+    return False
+
+long_names = filter(name_filter, names)
+print(list(long_names))
+"""
+"""
+# Reduce Functions 
+
+numbers_str = ['1', '2', '3', '4', '5']  # iterable
+def add_two_nums(x, y):
+    return int(x) + int(y)
+
+total = reduce(add_two_nums, numbers_str)
+print(total)    # 15
+"""
+
+# End of the Day 14
+
+#----------------------
+
+# Start of the Day 15
+
+# Python Type Errors
+
+# 1-) SyntaxError
+# It is the type of error given when you write missing codes or forget things like parentheses and commas.
+
+# 2-) NameError
+# Type of error when naming an unassigned variable or breaking the canonical name patterns used for Python.
+
+# 3-) IndexError
+# It is the error type given when wrong index number is processed in groups with more than one index.
+
+# 4-) ModuleNotFoundError
+# It is the type of error that is given when we call a module that does not exist or call it with the wrong name (both the same thing actually).
+
+# 5-) AttributeError
+# If we call a function that is not inside the modules or is used incorrectly, this type of error is received.
+
+# 6-) KeyError
+# It is the type of error given when an incorrect operation is made with the key name used in dictionaries.
+
+# 7-) TypeError
+# It is the type of error that Python cannot calculate without bringing operations with integer, float, string, boolean or function types to each other and/or without bringing them to the same class.
+
+# 8-) ImportError
+# It is the type of error given when we import a function with the wrong name or not from the modules we call.
+
+# 9-) ValueError
+# This is the error we get when we try to assign more than one value to a variable, it is usually the type of error we get by assigning something of different classes to a single variable.
+
+# 10-) ZeroDivisionError
+# Is the type of error we get when we try to divide a number by 0.
+
+# End of the Day 15
+
+#-------------------
+
+# Start of the Day 16
+
+# Python datetime
+
+"""
+# All functions of datetime module
+import datetime
+print(dir(datetime))
+['MAXYEAR', 'MINYEAR', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'date', 'datetime', 'datetime_CAPI', 'sys', 'time', 'timedelta', 'timezone', 'tzinfo']
+"""
+
